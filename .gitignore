@@ -1,0 +1,9 @@
+*.tif
+*.TIF
+*.pth
+*.pt
+
+# Standard Python ignores
+*.pyc
+__pycache__/
+.ipynb_checkpoints/

@@ -1,0 +1,360 @@
+nohup: ignoring input
+============================================================
+  ARCHITECTURE ABLATION PIPELINE
+============================================================
+  Device:       cuda
+  Epochs:       100
+  Batch size:   128
+
+── Loading Dataset ...
+  Loading dataset from: /opt/watchdog/users/cerussite/alok/work/torch_sliding_dataset.pt
+  Dataset loaded: 2703 samples
+  Input shape:  (2703, 7, 32, 32)
+  Label shape:  (2703, 32, 32)
+  Input dtype:  torch.float32
+  Label dtype:  torch.int64
+  Input range:  [-0.27, 36037.00]
+  Label unique: [1, 2, 7, 8, 11]
+  Metadata rows: 2703
+
+  Channel normalization stats:
+    B2: mean=9037.26, std=1453.98
+    B3: mean=9768.10, std=1757.99
+    B4: mean=9573.81, std=2217.61
+    B5: mean=14449.58, std=4230.16
+    B6: mean=12468.06, std=3402.20
+    B7: mean=10726.65, std=2952.71
+    NDVI: mean=0.18, std=0.15
+
+  Train: 2162 samples
+  Val:   541 samples
+
+── Computing class weights ...
+
+============================================================
+  TRAINING BACKBONE: resnet18
+============================================================
+  Params: 14,342,058 trainable
+
+  Ep   1/100 | TrLoss:1.6143 OA:0.5447 mIoU:0.1600 | VaLoss:1.2393 OA:0.7446 mIoU:0.2431 | 1.8s
+  Ep   2/100 | TrLoss:0.6593 OA:0.8744 mIoU:0.3375 | VaLoss:0.4691 OA:0.9305 mIoU:0.6048 | 1.4s
+  Ep   3/100 | TrLoss:0.3160 OA:0.9230 mIoU:0.5814 | VaLoss:0.2637 OA:0.9244 mIoU:0.5996 | 1.5s
+  Ep   4/100 | TrLoss:0.2061 OA:0.9385 mIoU:0.6189 | VaLoss:0.1743 OA:0.9484 mIoU:0.7745 | 1.4s
+  Ep   5/100 | TrLoss:0.1540 OA:0.9497 mIoU:0.7781 | VaLoss:0.1951 OA:0.9488 mIoU:0.7966 | 1.5s
+  Ep   6/100 | TrLoss:0.1313 OA:0.9542 mIoU:0.7933 | VaLoss:0.1048 OA:0.9625 mIoU:0.8199 | 1.5s
+  Ep   7/100 | TrLoss:0.1061 OA:0.9602 mIoU:0.8138 | VaLoss:0.0926 OA:0.9624 mIoU:0.8123 | 1.4s
+  Ep   8/100 | TrLoss:0.0884 OA:0.9641 mIoU:0.8262 | VaLoss:0.0778 OA:0.9678 mIoU:0.8423 | 1.4s
+  Ep   9/100 | TrLoss:0.0792 OA:0.9679 mIoU:0.8408 | VaLoss:0.0716 OA:0.9700 mIoU:0.8431 | 1.4s
+  Ep  10/100 | TrLoss:0.0730 OA:0.9699 mIoU:0.8423 | VaLoss:0.0667 OA:0.9688 mIoU:0.8334 | 1.5s
+  Ep  11/100 | TrLoss:0.0648 OA:0.9720 mIoU:0.8541 | VaLoss:0.0572 OA:0.9740 mIoU:0.8609 | 1.7s
+  Ep  12/100 | TrLoss:0.0604 OA:0.9741 mIoU:0.8672 | VaLoss:0.0547 OA:0.9737 mIoU:0.8637 | 1.4s
+  Ep  13/100 | TrLoss:0.0602 OA:0.9727 mIoU:0.8620 | VaLoss:0.0595 OA:0.9709 mIoU:0.8523 | 1.4s
+  Ep  14/100 | TrLoss:0.0615 OA:0.9722 mIoU:0.8637 | VaLoss:0.0532 OA:0.9731 mIoU:0.8622 | 1.4s
+  Ep  15/100 | TrLoss:0.0561 OA:0.9738 mIoU:0.8710 | VaLoss:0.0526 OA:0.9731 mIoU:0.8526 | 1.5s
+  Ep  16/100 | TrLoss:0.0510 OA:0.9760 mIoU:0.8756 | VaLoss:0.0463 OA:0.9748 mIoU:0.8780 | 1.5s
+  Ep  17/100 | TrLoss:0.0457 OA:0.9781 mIoU:0.8833 | VaLoss:0.0423 OA:0.9796 mIoU:0.8887 | 1.5s
+  Ep  18/100 | TrLoss:0.0427 OA:0.9793 mIoU:0.8899 | VaLoss:0.0413 OA:0.9824 mIoU:0.9155 | 1.4s
+  Ep  19/100 | TrLoss:0.0399 OA:0.9813 mIoU:0.9005 | VaLoss:0.0369 OA:0.9821 mIoU:0.9005 | 1.4s
+  Ep  20/100 | TrLoss:0.0422 OA:0.9785 mIoU:0.8930 | VaLoss:0.0376 OA:0.9820 mIoU:0.9139 | 1.7s
+  Ep  21/100 | TrLoss:0.0359 OA:0.9828 mIoU:0.9074 | VaLoss:0.0349 OA:0.9830 mIoU:0.9070 | 1.4s
+  Ep  22/100 | TrLoss:0.0357 OA:0.9823 mIoU:0.9055 | VaLoss:0.0343 OA:0.9830 mIoU:0.9048 | 1.4s
+  Ep  23/100 | TrLoss:0.0332 OA:0.9837 mIoU:0.9125 | VaLoss:0.0308 OA:0.9849 mIoU:0.9183 | 1.5s
+  Ep  24/100 | TrLoss:0.0331 OA:0.9837 mIoU:0.9125 | VaLoss:0.0303 OA:0.9841 mIoU:0.9083 | 1.4s
+  Ep  25/100 | TrLoss:0.0297 OA:0.9848 mIoU:0.9194 | VaLoss:0.0287 OA:0.9848 mIoU:0.9192 | 1.4s
+  Ep  26/100 | TrLoss:0.0292 OA:0.9852 mIoU:0.9199 | VaLoss:0.0289 OA:0.9878 mIoU:0.9422 | 1.4s
+  Ep  27/100 | TrLoss:0.0293 OA:0.9858 mIoU:0.9217 | VaLoss:0.0322 OA:0.9835 mIoU:0.9149 | 1.4s
+  Ep  28/100 | TrLoss:0.0322 OA:0.9842 mIoU:0.9188 | VaLoss:0.0374 OA:0.9820 mIoU:0.9076 | 1.4s
+  Ep  29/100 | TrLoss:0.0311 OA:0.9850 mIoU:0.9166 | VaLoss:0.0314 OA:0.9835 mIoU:0.9161 | 1.4s
+  Ep  30/100 | TrLoss:0.0289 OA:0.9854 mIoU:0.9215 | VaLoss:0.0269 OA:0.9865 mIoU:0.9291 | 1.7s
+  Ep  31/100 | TrLoss:0.0248 OA:0.9877 mIoU:0.9353 | VaLoss:0.0253 OA:0.9867 mIoU:0.9256 | 1.4s
+  Ep  32/100 | TrLoss:0.0250 OA:0.9871 mIoU:0.9294 | VaLoss:2.6800 OA:0.7836 mIoU:0.5569 | 1.4s
+  Ep  33/100 | TrLoss:0.0321 OA:0.9838 mIoU:0.9153 | VaLoss:0.0706 OA:0.9780 mIoU:0.9094 | 1.4s
+  Ep  34/100 | TrLoss:0.0285 OA:0.9850 mIoU:0.9219 | VaLoss:0.0256 OA:0.9861 mIoU:0.9209 | 1.4s
+  Ep  35/100 | TrLoss:0.0278 OA:0.9854 mIoU:0.9254 | VaLoss:0.0279 OA:0.9858 mIoU:0.9411 | 1.4s
+  Ep  36/100 | TrLoss:0.0286 OA:0.9849 mIoU:0.9245 | VaLoss:0.0231 OA:0.9888 mIoU:0.9442 | 1.4s
+  Ep  37/100 | TrLoss:0.0280 OA:0.9852 mIoU:0.9232 | VaLoss:0.0244 OA:0.9874 mIoU:0.9296 | 1.4s
+  Ep  38/100 | TrLoss:0.0237 OA:0.9876 mIoU:0.9358 | VaLoss:0.0225 OA:0.9879 mIoU:0.9354 | 1.4s
+  Ep  39/100 | TrLoss:0.0217 OA:0.9886 mIoU:0.9411 | VaLoss:0.0213 OA:0.9889 mIoU:0.9428 | 1.4s
+  Ep  40/100 | TrLoss:0.0226 OA:0.9879 mIoU:0.9405 | VaLoss:0.0204 OA:0.9897 mIoU:0.9448 | 1.4s
+  Ep  41/100 | TrLoss:0.0190 OA:0.9902 mIoU:0.9495 | VaLoss:0.0192 OA:0.9903 mIoU:0.9491 | 1.4s
+  Ep  42/100 | TrLoss:0.0177 OA:0.9911 mIoU:0.9530 | VaLoss:0.0186 OA:0.9906 mIoU:0.9488 | 1.4s
+  Ep  43/100 | TrLoss:0.0169 OA:0.9915 mIoU:0.9532 | VaLoss:0.0193 OA:0.9902 mIoU:0.9468 | 1.4s
+  Ep  44/100 | TrLoss:0.0193 OA:0.9900 mIoU:0.9470 | VaLoss:0.0190 OA:0.9900 mIoU:0.9444 | 1.5s
+  Ep  45/100 | TrLoss:0.0181 OA:0.9906 mIoU:0.9489 | VaLoss:0.0190 OA:0.9908 mIoU:0.9534 | 1.6s
+  Ep  46/100 | TrLoss:0.0163 OA:0.9918 mIoU:0.9560 | VaLoss:0.0174 OA:0.9912 mIoU:0.9512 | 1.4s
+  Ep  47/100 | TrLoss:0.0162 OA:0.9916 mIoU:0.9578 | VaLoss:0.0180 OA:0.9910 mIoU:0.9528 | 1.4s
+  Ep  48/100 | TrLoss:0.0153 OA:0.9921 mIoU:0.9575 | VaLoss:0.0166 OA:0.9913 mIoU:0.9504 | 1.4s
+  Ep  49/100 | TrLoss:0.0150 OA:0.9923 mIoU:0.9582 | VaLoss:0.0166 OA:0.9914 mIoU:0.9497 | 1.4s
+  Ep  50/100 | TrLoss:0.0146 OA:0.9925 mIoU:0.9615 | VaLoss:0.0163 OA:0.9921 mIoU:0.9591 | 1.7s
+  Ep  51/100 | TrLoss:0.0137 OA:0.9933 mIoU:0.9624 | VaLoss:0.0161 OA:0.9925 mIoU:0.9613 | 1.4s
+  Ep  52/100 | TrLoss:0.0136 OA:0.9932 mIoU:0.9622 | VaLoss:0.0159 OA:0.9926 mIoU:0.9625 | 1.4s
+  Ep  53/100 | TrLoss:0.0131 OA:0.9936 mIoU:0.9644 | VaLoss:0.0152 OA:0.9929 mIoU:0.9636 | 1.4s
+  Ep  54/100 | TrLoss:0.0126 OA:0.9940 mIoU:0.9668 | VaLoss:0.0153 OA:0.9924 mIoU:0.9556 | 1.4s
+  Ep  55/100 | TrLoss:0.0124 OA:0.9941 mIoU:0.9662 | VaLoss:0.0154 OA:0.9926 mIoU:0.9568 | 1.4s
+  Ep  56/100 | TrLoss:0.0123 OA:0.9941 mIoU:0.9677 | VaLoss:0.0149 OA:0.9923 mIoU:0.9535 | 1.4s
+  Ep  57/100 | TrLoss:0.0119 OA:0.9944 mIoU:0.9689 | VaLoss:0.0147 OA:0.9931 mIoU:0.9622 | 1.4s
+  Ep  58/100 | TrLoss:0.0114 OA:0.9946 mIoU:0.9696 | VaLoss:0.0148 OA:0.9935 mIoU:0.9683 | 1.4s
+  Ep  59/100 | TrLoss:0.0125 OA:0.9939 mIoU:0.9688 | VaLoss:0.0151 OA:0.9926 mIoU:0.9608 | 1.4s
+  Ep  60/100 | TrLoss:0.0114 OA:0.9948 mIoU:0.9710 | VaLoss:0.0145 OA:0.9934 mIoU:0.9662 | 1.4s
+  Ep  61/100 | TrLoss:0.0110 OA:0.9948 mIoU:0.9702 | VaLoss:0.0145 OA:0.9937 mIoU:0.9688 | 1.5s
+  Ep  62/100 | TrLoss:0.0107 OA:0.9952 mIoU:0.9723 | VaLoss:0.0140 OA:0.9938 mIoU:0.9706 | 1.5s
+  Ep  63/100 | TrLoss:0.0104 OA:0.9952 mIoU:0.9739 | VaLoss:0.0138 OA:0.9935 mIoU:0.9660 | 1.5s
+  Ep  64/100 | TrLoss:0.0106 OA:0.9950 mIoU:0.9728 | VaLoss:0.0138 OA:0.9936 mIoU:0.9655 | 1.4s
+  Ep  65/100 | TrLoss:0.0102 OA:0.9954 mIoU:0.9737 | VaLoss:0.0135 OA:0.9937 mIoU:0.9663 | 1.7s
+  Ep  66/100 | TrLoss:0.0100 OA:0.9955 mIoU:0.9748 | VaLoss:0.0137 OA:0.9939 mIoU:0.9692 | 1.4s
+  Ep  67/100 | TrLoss:0.0100 OA:0.9955 mIoU:0.9752 | VaLoss:0.0134 OA:0.9940 mIoU:0.9698 | 1.4s
+  Ep  68/100 | TrLoss:0.0096 OA:0.9956 mIoU:0.9752 | VaLoss:0.0135 OA:0.9940 mIoU:0.9711 | 1.4s
+  Ep  69/100 | TrLoss:0.0095 OA:0.9957 mIoU:0.9759 | VaLoss:0.0133 OA:0.9939 mIoU:0.9683 | 1.5s
+  Ep  70/100 | TrLoss:0.0098 OA:0.9955 mIoU:0.9756 | VaLoss:0.0133 OA:0.9940 mIoU:0.9693 | 1.8s
+  Ep  71/100 | TrLoss:0.0094 OA:0.9956 mIoU:0.9762 | VaLoss:0.0133 OA:0.9943 mIoU:0.9733 | 1.6s
+  Ep  72/100 | TrLoss:0.0094 OA:0.9957 mIoU:0.9759 | VaLoss:0.0130 OA:0.9942 mIoU:0.9696 | 1.6s
+  Ep  73/100 | TrLoss:0.0095 OA:0.9960 mIoU:0.9784 | VaLoss:0.0129 OA:0.9939 mIoU:0.9672 | 1.6s
+  Ep  74/100 | TrLoss:0.0090 OA:0.9961 mIoU:0.9784 | VaLoss:0.0132 OA:0.9942 mIoU:0.9721 | 1.6s
+  Ep  75/100 | TrLoss:0.0088 OA:0.9960 mIoU:0.9767 | VaLoss:0.0129 OA:0.9943 mIoU:0.9728 | 1.8s
+  Ep  76/100 | TrLoss:0.0093 OA:0.9960 mIoU:0.9773 | VaLoss:0.0128 OA:0.9941 mIoU:0.9694 | 1.7s
+  Ep  77/100 | TrLoss:0.0095 OA:0.9959 mIoU:0.9784 | VaLoss:0.0129 OA:0.9942 mIoU:0.9715 | 1.7s
+  Ep  78/100 | TrLoss:0.0094 OA:0.9958 mIoU:0.9755 | VaLoss:0.0131 OA:0.9946 mIoU:0.9742 | 1.7s
+  Ep  79/100 | TrLoss:0.0089 OA:0.9960 mIoU:0.9755 | VaLoss:0.0125 OA:0.9943 mIoU:0.9704 | 1.8s
+  Ep  80/100 | TrLoss:0.0088 OA:0.9963 mIoU:0.9800 | VaLoss:0.0131 OA:0.9943 mIoU:0.9702 | 1.7s
+  Ep  81/100 | TrLoss:0.0085 OA:0.9963 mIoU:0.9782 | VaLoss:0.0124 OA:0.9944 mIoU:0.9722 | 1.6s
+  Ep  82/100 | TrLoss:0.0089 OA:0.9960 mIoU:0.9787 | VaLoss:0.0124 OA:0.9944 mIoU:0.9714 | 1.6s
+  Ep  83/100 | TrLoss:0.0086 OA:0.9965 mIoU:0.9803 | VaLoss:0.0126 OA:0.9945 mIoU:0.9727 | 1.6s
+  Ep  84/100 | TrLoss:0.0081 OA:0.9965 mIoU:0.9794 | VaLoss:0.0127 OA:0.9945 mIoU:0.9731 | 1.7s
+  Ep  85/100 | TrLoss:0.0084 OA:0.9965 mIoU:0.9798 | VaLoss:0.0127 OA:0.9945 mIoU:0.9722 | 1.6s
+  Ep  86/100 | TrLoss:0.0082 OA:0.9966 mIoU:0.9802 | VaLoss:0.0125 OA:0.9945 mIoU:0.9720 | 1.5s
+  Ep  87/100 | TrLoss:0.0081 OA:0.9966 mIoU:0.9807 | VaLoss:0.0128 OA:0.9946 mIoU:0.9738 | 1.6s
+  Ep  88/100 | TrLoss:0.0088 OA:0.9963 mIoU:0.9788 | VaLoss:0.0123 OA:0.9944 mIoU:0.9717 | 1.6s
+  Ep  89/100 | TrLoss:0.0081 OA:0.9966 mIoU:0.9806 | VaLoss:0.0126 OA:0.9946 mIoU:0.9740 | 1.7s
+  Ep  90/100 | TrLoss:0.0080 OA:0.9967 mIoU:0.9807 | VaLoss:0.0127 OA:0.9946 mIoU:0.9726 | 1.7s
+  Ep  91/100 | TrLoss:0.0080 OA:0.9967 mIoU:0.9807 | VaLoss:0.0126 OA:0.9946 mIoU:0.9738 | 1.5s
+  Ep  92/100 | TrLoss:0.0079 OA:0.9968 mIoU:0.9806 | VaLoss:0.0125 OA:0.9946 mIoU:0.9733 | 1.5s
+  Ep  93/100 | TrLoss:0.0080 OA:0.9967 mIoU:0.9813 | VaLoss:0.0127 OA:0.9946 mIoU:0.9732 | 1.6s
+  Ep  94/100 | TrLoss:0.0082 OA:0.9965 mIoU:0.9809 | VaLoss:0.0127 OA:0.9946 mIoU:0.9738 | 1.8s
+  Ep  95/100 | TrLoss:0.0078 OA:0.9968 mIoU:0.9812 | VaLoss:0.0125 OA:0.9946 mIoU:0.9731 | 1.5s
+  Ep  96/100 | TrLoss:0.0077 OA:0.9968 mIoU:0.9812 | VaLoss:0.0124 OA:0.9946 mIoU:0.9728 | 1.5s
+  Ep  97/100 | TrLoss:0.0081 OA:0.9966 mIoU:0.9810 | VaLoss:0.0125 OA:0.9946 mIoU:0.9735 | 1.5s
+  Ep  98/100 | TrLoss:0.0080 OA:0.9966 mIoU:0.9809 | VaLoss:0.0125 OA:0.9946 mIoU:0.9732 | 1.5s
+  Ep  99/100 | TrLoss:0.0080 OA:0.9966 mIoU:0.9809 | VaLoss:0.0124 OA:0.9946 mIoU:0.9728 | 1.8s
+  Ep 100/100 | TrLoss:0.0081 OA:0.9966 mIoU:0.9809 | VaLoss:0.0125 OA:0.9946 mIoU:0.9735 | 1.5s
+
+  ✓ Finished resnet18. Best mIoU: 0.9742
+  Logs saved to: /opt/watchdog/users/cerussite/alok/work/modelss/ablations/logs/resnet18_history.json
+
+============================================================
+  TRAINING BACKBONE: efficientnet-b0
+============================================================
+Warning: You are sending unauthenticated requests to the HF Hub. Please set a HF_TOKEN to enable higher rate limits and faster downloads.
+  Params: 6,253,926 trainable
+
+  Ep   1/100 | TrLoss:1.3753 OA:0.6672 mIoU:0.2158 | VaLoss:0.7970 OA:0.8353 mIoU:0.3400 | 1.9s
+  Ep   2/100 | TrLoss:0.5530 OA:0.8713 mIoU:0.3855 | VaLoss:0.5405 OA:0.8846 mIoU:0.5516 | 1.7s
+  Ep   3/100 | TrLoss:0.2904 OA:0.9208 mIoU:0.4947 | VaLoss:0.3096 OA:0.9243 mIoU:0.7345 | 1.9s
+  Ep   4/100 | TrLoss:0.1823 OA:0.9466 mIoU:0.6308 | VaLoss:0.2059 OA:0.9496 mIoU:0.6542 | 1.7s
+  Ep   5/100 | TrLoss:0.1338 OA:0.9568 mIoU:0.6571 | VaLoss:0.1544 OA:0.9512 mIoU:0.7990 | 1.7s
+  Ep   6/100 | TrLoss:0.1082 OA:0.9613 mIoU:0.6729 | VaLoss:0.1373 OA:0.9515 mIoU:0.8193 | 1.7s
+  Ep   7/100 | TrLoss:0.0975 OA:0.9637 mIoU:0.8182 | VaLoss:0.1187 OA:0.9598 mIoU:0.8473 | 1.7s
+  Ep   8/100 | TrLoss:0.0854 OA:0.9675 mIoU:0.8313 | VaLoss:0.1119 OA:0.9630 mIoU:0.8626 | 2.0s
+  Ep   9/100 | TrLoss:0.0786 OA:0.9687 mIoU:0.8371 | VaLoss:0.0879 OA:0.9719 mIoU:0.8760 | 1.7s
+  Ep  10/100 | TrLoss:0.0682 OA:0.9716 mIoU:0.8526 | VaLoss:0.0828 OA:0.9638 mIoU:0.8578 | 1.7s
+  Ep  11/100 | TrLoss:0.0595 OA:0.9745 mIoU:0.8646 | VaLoss:0.0740 OA:0.9648 mIoU:0.8604 | 1.7s
+  Ep  12/100 | TrLoss:0.0539 OA:0.9764 mIoU:0.8723 | VaLoss:0.0613 OA:0.9702 mIoU:0.8630 | 1.7s
+  Ep  13/100 | TrLoss:0.0500 OA:0.9777 mIoU:0.8795 | VaLoss:0.0522 OA:0.9777 mIoU:0.8930 | 1.7s
+  Ep  14/100 | TrLoss:0.0486 OA:0.9773 mIoU:0.8806 | VaLoss:0.0457 OA:0.9811 mIoU:0.9024 | 1.7s
+  Ep  15/100 | TrLoss:0.0451 OA:0.9794 mIoU:0.8874 | VaLoss:0.0490 OA:0.9768 mIoU:0.8934 | 1.7s
+  Ep  16/100 | TrLoss:0.0393 OA:0.9822 mIoU:0.8993 | VaLoss:0.0387 OA:0.9813 mIoU:0.8963 | 1.7s
+  Ep  17/100 | TrLoss:0.0382 OA:0.9820 mIoU:0.8996 | VaLoss:0.0378 OA:0.9836 mIoU:0.9121 | 1.7s
+  Ep  18/100 | TrLoss:0.0377 OA:0.9814 mIoU:0.9034 | VaLoss:0.0355 OA:0.9824 mIoU:0.8998 | 1.6s
+  Ep  19/100 | TrLoss:0.0332 OA:0.9837 mIoU:0.9094 | VaLoss:0.0337 OA:0.9849 mIoU:0.9143 | 1.6s
+  Ep  20/100 | TrLoss:0.0320 OA:0.9851 mIoU:0.9133 | VaLoss:0.0317 OA:0.9842 mIoU:0.9049 | 1.6s
+  Ep  21/100 | TrLoss:0.0312 OA:0.9847 mIoU:0.9144 | VaLoss:0.0305 OA:0.9851 mIoU:0.9147 | 1.6s
+  Ep  22/100 | TrLoss:0.0301 OA:0.9850 mIoU:0.9188 | VaLoss:0.0287 OA:0.9862 mIoU:0.9227 | 1.6s
+  Ep  23/100 | TrLoss:0.0281 OA:0.9861 mIoU:0.9222 | VaLoss:0.0274 OA:0.9873 mIoU:0.9255 | 1.7s
+  Ep  24/100 | TrLoss:0.0266 OA:0.9871 mIoU:0.9261 | VaLoss:0.0277 OA:0.9856 mIoU:0.9181 | 1.7s
+  Ep  25/100 | TrLoss:0.0252 OA:0.9877 mIoU:0.9281 | VaLoss:0.0256 OA:0.9873 mIoU:0.9192 | 2.0s
+  Ep  26/100 | TrLoss:0.0271 OA:0.9863 mIoU:0.9279 | VaLoss:0.0276 OA:0.9853 mIoU:0.9116 | 1.7s
+  Ep  27/100 | TrLoss:0.0258 OA:0.9871 mIoU:0.9253 | VaLoss:0.0263 OA:0.9876 mIoU:0.9345 | 1.7s
+  Ep  28/100 | TrLoss:0.0229 OA:0.9888 mIoU:0.9360 | VaLoss:0.0234 OA:0.9890 mIoU:0.9353 | 1.7s
+  Ep  29/100 | TrLoss:0.0237 OA:0.9879 mIoU:0.9331 | VaLoss:0.0231 OA:0.9886 mIoU:0.9342 | 1.7s
+  Ep  30/100 | TrLoss:0.0211 OA:0.9897 mIoU:0.9395 | VaLoss:0.0229 OA:0.9897 mIoU:0.9457 | 1.9s
+  Ep  31/100 | TrLoss:0.0197 OA:0.9903 mIoU:0.9427 | VaLoss:0.0224 OA:0.9904 mIoU:0.9495 | 1.7s
+  Ep  32/100 | TrLoss:0.0207 OA:0.9898 mIoU:0.9417 | VaLoss:0.0222 OA:0.9884 mIoU:0.9327 | 1.7s
+  Ep  33/100 | TrLoss:0.0195 OA:0.9901 mIoU:0.9425 | VaLoss:0.0206 OA:0.9904 mIoU:0.9468 | 1.7s
+  Ep  34/100 | TrLoss:0.0191 OA:0.9900 mIoU:0.9455 | VaLoss:0.0225 OA:0.9901 mIoU:0.9507 | 1.9s
+  Ep  35/100 | TrLoss:0.0197 OA:0.9898 mIoU:0.9470 | VaLoss:0.0212 OA:0.9906 mIoU:0.9435 | 1.7s
+  Ep  36/100 | TrLoss:0.0174 OA:0.9914 mIoU:0.9482 | VaLoss:0.0193 OA:0.9899 mIoU:0.9351 | 1.7s
+  Ep  37/100 | TrLoss:0.0165 OA:0.9923 mIoU:0.9510 | VaLoss:0.0186 OA:0.9917 mIoU:0.9529 | 1.7s
+  Ep  38/100 | TrLoss:0.0162 OA:0.9921 mIoU:0.9541 | VaLoss:0.0190 OA:0.9923 mIoU:0.9551 | 1.7s
+  Ep  39/100 | TrLoss:0.0163 OA:0.9921 mIoU:0.9528 | VaLoss:0.0178 OA:0.9913 mIoU:0.9503 | 1.7s
+  Ep  40/100 | TrLoss:0.0165 OA:0.9916 mIoU:0.9531 | VaLoss:0.0174 OA:0.9912 mIoU:0.9457 | 1.7s
+  Ep  41/100 | TrLoss:0.0159 OA:0.9921 mIoU:0.9538 | VaLoss:0.0176 OA:0.9920 mIoU:0.9599 | 1.7s
+  Ep  42/100 | TrLoss:0.0154 OA:0.9926 mIoU:0.9577 | VaLoss:0.0165 OA:0.9924 mIoU:0.9571 | 1.7s
+  Ep  43/100 | TrLoss:0.0137 OA:0.9935 mIoU:0.9596 | VaLoss:0.0167 OA:0.9929 mIoU:0.9599 | 1.7s
+  Ep  44/100 | TrLoss:0.0135 OA:0.9938 mIoU:0.9624 | VaLoss:0.0163 OA:0.9924 mIoU:0.9495 | 1.8s
+  Ep  45/100 | TrLoss:0.0130 OA:0.9939 mIoU:0.9605 | VaLoss:0.0158 OA:0.9924 mIoU:0.9500 | 1.8s
+  Ep  46/100 | TrLoss:0.0128 OA:0.9940 mIoU:0.9629 | VaLoss:0.0157 OA:0.9926 mIoU:0.9552 | 2.0s
+  Ep  47/100 | TrLoss:0.0121 OA:0.9945 mIoU:0.9662 | VaLoss:0.0145 OA:0.9929 mIoU:0.9554 | 1.7s
+  Ep  48/100 | TrLoss:0.0130 OA:0.9940 mIoU:0.9621 | VaLoss:0.0152 OA:0.9922 mIoU:0.9579 | 1.7s
+  Ep  49/100 | TrLoss:0.0129 OA:0.9938 mIoU:0.9637 | VaLoss:0.0152 OA:0.9938 mIoU:0.9663 | 1.8s
+  Ep  50/100 | TrLoss:0.0126 OA:0.9938 mIoU:0.9651 | VaLoss:0.0149 OA:0.9927 mIoU:0.9523 | 2.0s
+  Ep  51/100 | TrLoss:0.0121 OA:0.9943 mIoU:0.9648 | VaLoss:0.0145 OA:0.9931 mIoU:0.9575 | 1.7s
+  Ep  52/100 | TrLoss:0.0116 OA:0.9946 mIoU:0.9678 | VaLoss:0.0139 OA:0.9933 mIoU:0.9605 | 1.8s
+  Ep  53/100 | TrLoss:0.0114 OA:0.9947 mIoU:0.9690 | VaLoss:0.0140 OA:0.9938 mIoU:0.9643 | 1.7s
+  Ep  54/100 | TrLoss:0.0109 OA:0.9950 mIoU:0.9694 | VaLoss:0.0139 OA:0.9937 mIoU:0.9648 | 1.8s
+  Ep  55/100 | TrLoss:0.0105 OA:0.9954 mIoU:0.9705 | VaLoss:0.0135 OA:0.9940 mIoU:0.9660 | 1.9s
+  Ep  56/100 | TrLoss:0.0097 OA:0.9958 mIoU:0.9739 | VaLoss:0.0133 OA:0.9943 mIoU:0.9690 | 1.8s
+  Ep  57/100 | TrLoss:0.0094 OA:0.9960 mIoU:0.9748 | VaLoss:0.0130 OA:0.9944 mIoU:0.9679 | 1.8s
+  Ep  58/100 | TrLoss:0.0094 OA:0.9959 mIoU:0.9742 | VaLoss:0.0136 OA:0.9944 mIoU:0.9687 | 1.8s
+  Ep  59/100 | TrLoss:0.0093 OA:0.9959 mIoU:0.9746 | VaLoss:0.0134 OA:0.9946 mIoU:0.9716 | 2.0s
+  Ep  60/100 | TrLoss:0.0090 OA:0.9962 mIoU:0.9751 | VaLoss:0.0128 OA:0.9944 mIoU:0.9681 | 1.8s
+  Ep  61/100 | TrLoss:0.0096 OA:0.9959 mIoU:0.9735 | VaLoss:0.0137 OA:0.9938 mIoU:0.9641 | 1.7s
+  Ep  62/100 | TrLoss:0.0095 OA:0.9959 mIoU:0.9760 | VaLoss:0.0132 OA:0.9943 mIoU:0.9701 | 1.8s
+  Ep  63/100 | TrLoss:0.0097 OA:0.9954 mIoU:0.9722 | VaLoss:0.0133 OA:0.9948 mIoU:0.9731 | 1.9s
+  Ep  64/100 | TrLoss:0.0092 OA:0.9960 mIoU:0.9747 | VaLoss:0.0128 OA:0.9945 mIoU:0.9676 | 1.8s
+  Ep  65/100 | TrLoss:0.0084 OA:0.9966 mIoU:0.9787 | VaLoss:0.0125 OA:0.9946 mIoU:0.9676 | 1.8s
+  Ep  66/100 | TrLoss:0.0082 OA:0.9966 mIoU:0.9796 | VaLoss:0.0126 OA:0.9945 mIoU:0.9689 | 1.7s
+  Ep  67/100 | TrLoss:0.0082 OA:0.9966 mIoU:0.9790 | VaLoss:0.0121 OA:0.9947 mIoU:0.9708 | 1.6s
+  Ep  68/100 | TrLoss:0.0082 OA:0.9967 mIoU:0.9788 | VaLoss:0.0122 OA:0.9948 mIoU:0.9714 | 1.8s
+  Ep  69/100 | TrLoss:0.0082 OA:0.9965 mIoU:0.9780 | VaLoss:0.0125 OA:0.9952 mIoU:0.9758 | 1.6s
+  Ep  70/100 | TrLoss:0.0084 OA:0.9964 mIoU:0.9787 | VaLoss:0.0122 OA:0.9949 mIoU:0.9711 | 1.7s
+  Ep  71/100 | TrLoss:0.0082 OA:0.9966 mIoU:0.9799 | VaLoss:0.0120 OA:0.9951 mIoU:0.9734 | 1.7s
+  Ep  72/100 | TrLoss:0.0080 OA:0.9966 mIoU:0.9789 | VaLoss:0.0121 OA:0.9949 mIoU:0.9713 | 1.9s
+  Ep  73/100 | TrLoss:0.0077 OA:0.9969 mIoU:0.9792 | VaLoss:0.0118 OA:0.9953 mIoU:0.9758 | 1.9s
+  Ep  74/100 | TrLoss:0.0076 OA:0.9970 mIoU:0.9797 | VaLoss:0.0119 OA:0.9950 mIoU:0.9711 | 1.7s
+  Ep  75/100 | TrLoss:0.0073 OA:0.9971 mIoU:0.9816 | VaLoss:0.0118 OA:0.9954 mIoU:0.9759 | 1.7s
+  Ep  76/100 | TrLoss:0.0073 OA:0.9973 mIoU:0.9833 | VaLoss:0.0115 OA:0.9951 mIoU:0.9732 | 1.7s
+  Ep  77/100 | TrLoss:0.0078 OA:0.9967 mIoU:0.9810 | VaLoss:0.0116 OA:0.9953 mIoU:0.9761 | 1.7s
+  Ep  78/100 | TrLoss:0.0073 OA:0.9971 mIoU:0.9805 | VaLoss:0.0117 OA:0.9954 mIoU:0.9758 | 1.7s
+  Ep  79/100 | TrLoss:0.0071 OA:0.9972 mIoU:0.9826 | VaLoss:0.0116 OA:0.9953 mIoU:0.9742 | 1.7s
+  Ep  80/100 | TrLoss:0.0077 OA:0.9969 mIoU:0.9808 | VaLoss:0.0117 OA:0.9954 mIoU:0.9752 | 1.7s
+  Ep  81/100 | TrLoss:0.0075 OA:0.9970 mIoU:0.9807 | VaLoss:0.0116 OA:0.9952 mIoU:0.9730 | 1.7s
+  Ep  82/100 | TrLoss:0.0072 OA:0.9972 mIoU:0.9814 | VaLoss:0.0117 OA:0.9954 mIoU:0.9760 | 2.0s
+  Ep  83/100 | TrLoss:0.0069 OA:0.9974 mIoU:0.9836 | VaLoss:0.0114 OA:0.9953 mIoU:0.9746 | 1.7s
+  Ep  84/100 | TrLoss:0.0067 OA:0.9975 mIoU:0.9832 | VaLoss:0.0115 OA:0.9954 mIoU:0.9759 | 1.8s
+  Ep  85/100 | TrLoss:0.0071 OA:0.9974 mIoU:0.9834 | VaLoss:0.0115 OA:0.9954 mIoU:0.9763 | 1.7s
+  Ep  86/100 | TrLoss:0.0067 OA:0.9975 mIoU:0.9831 | VaLoss:0.0114 OA:0.9955 mIoU:0.9763 | 1.7s
+  Ep  87/100 | TrLoss:0.0069 OA:0.9974 mIoU:0.9834 | VaLoss:0.0113 OA:0.9954 mIoU:0.9757 | 2.0s
+  Ep  88/100 | TrLoss:0.0067 OA:0.9976 mIoU:0.9844 | VaLoss:0.0115 OA:0.9954 mIoU:0.9758 | 1.7s
+  Ep  89/100 | TrLoss:0.0068 OA:0.9975 mIoU:0.9832 | VaLoss:0.0115 OA:0.9955 mIoU:0.9763 | 1.7s
+  Ep  90/100 | TrLoss:0.0069 OA:0.9974 mIoU:0.9829 | VaLoss:0.0115 OA:0.9953 mIoU:0.9737 | 1.6s
+  Ep  91/100 | TrLoss:0.0065 OA:0.9977 mIoU:0.9838 | VaLoss:0.0116 OA:0.9955 mIoU:0.9762 | 1.6s
+  Ep  92/100 | TrLoss:0.0071 OA:0.9974 mIoU:0.9841 | VaLoss:0.0117 OA:0.9956 mIoU:0.9774 | 1.6s
+  Ep  93/100 | TrLoss:0.0069 OA:0.9974 mIoU:0.9828 | VaLoss:0.0114 OA:0.9954 mIoU:0.9754 | 1.6s
+  Ep  94/100 | TrLoss:0.0070 OA:0.9974 mIoU:0.9828 | VaLoss:0.0113 OA:0.9954 mIoU:0.9754 | 1.6s
+  Ep  95/100 | TrLoss:0.0067 OA:0.9975 mIoU:0.9833 | VaLoss:0.0114 OA:0.9954 mIoU:0.9761 | 1.6s
+  Ep  96/100 | TrLoss:0.0066 OA:0.9975 mIoU:0.9842 | VaLoss:0.0114 OA:0.9955 mIoU:0.9761 | 1.6s
+  Ep  97/100 | TrLoss:0.0067 OA:0.9975 mIoU:0.9837 | VaLoss:0.0115 OA:0.9954 mIoU:0.9759 | 1.6s
+  Ep  98/100 | TrLoss:0.0071 OA:0.9974 mIoU:0.9835 | VaLoss:0.0115 OA:0.9955 mIoU:0.9768 | 1.9s
+  Ep  99/100 | TrLoss:0.0068 OA:0.9974 mIoU:0.9838 | VaLoss:0.0115 OA:0.9955 mIoU:0.9765 | 1.6s
+  Ep 100/100 | TrLoss:0.0069 OA:0.9974 mIoU:0.9840 | VaLoss:0.0114 OA:0.9954 mIoU:0.9760 | 1.6s
+
+  ✓ Finished efficientnet-b0. Best mIoU: 0.9774
+  Logs saved to: /opt/watchdog/users/cerussite/alok/work/modelss/ablations/logs/efficientnet-b0_history.json
+
+============================================================
+  TRAINING BACKBONE: mobilenet_v2
+============================================================
+  Params: 6,631,402 trainable
+
+  Ep   1/100 | TrLoss:1.5067 OA:0.2796 mIoU:0.0842 | VaLoss:1.0265 OA:0.5520 mIoU:0.1754 | 1.5s
+  Ep   2/100 | TrLoss:0.6374 OA:0.7964 mIoU:0.2890 | VaLoss:0.4679 OA:0.8857 mIoU:0.4583 | 1.5s
+  Ep   3/100 | TrLoss:0.3132 OA:0.9156 mIoU:0.4957 | VaLoss:0.2575 OA:0.9365 mIoU:0.7548 | 1.5s
+  Ep   4/100 | TrLoss:0.1873 OA:0.9407 mIoU:0.7568 | VaLoss:0.1608 OA:0.9430 mIoU:0.7634 | 1.5s
+  Ep   5/100 | TrLoss:0.1450 OA:0.9469 mIoU:0.7777 | VaLoss:0.1163 OA:0.9559 mIoU:0.8077 | 1.5s
+  Ep   6/100 | TrLoss:0.1128 OA:0.9570 mIoU:0.8034 | VaLoss:0.1019 OA:0.9596 mIoU:0.8103 | 1.5s
+  Ep   7/100 | TrLoss:0.0988 OA:0.9598 mIoU:0.8195 | VaLoss:0.0851 OA:0.9632 mIoU:0.8183 | 1.6s
+  Ep   8/100 | TrLoss:0.0839 OA:0.9647 mIoU:0.8332 | VaLoss:0.0763 OA:0.9682 mIoU:0.8553 | 1.7s
+  Ep   9/100 | TrLoss:0.0764 OA:0.9671 mIoU:0.8449 | VaLoss:0.0711 OA:0.9721 mIoU:0.8656 | 1.5s
+  Ep  10/100 | TrLoss:0.0703 OA:0.9689 mIoU:0.8483 | VaLoss:0.0637 OA:0.9727 mIoU:0.8591 | 1.5s
+  Ep  11/100 | TrLoss:0.0627 OA:0.9726 mIoU:0.8633 | VaLoss:0.0581 OA:0.9725 mIoU:0.8595 | 1.5s
+  Ep  12/100 | TrLoss:0.0603 OA:0.9729 mIoU:0.8595 | VaLoss:0.0607 OA:0.9740 mIoU:0.8547 | 1.5s
+  Ep  13/100 | TrLoss:0.0539 OA:0.9753 mIoU:0.8709 | VaLoss:0.0497 OA:0.9768 mIoU:0.8805 | 1.8s
+  Ep  14/100 | TrLoss:0.0562 OA:0.9729 mIoU:0.8744 | VaLoss:0.0498 OA:0.9761 mIoU:0.8831 | 1.5s
+  Ep  15/100 | TrLoss:0.0510 OA:0.9757 mIoU:0.8803 | VaLoss:0.0458 OA:0.9768 mIoU:0.8781 | 1.5s
+  Ep  16/100 | TrLoss:0.0458 OA:0.9779 mIoU:0.8790 | VaLoss:0.0456 OA:0.9820 mIoU:0.9155 | 1.5s
+  Ep  17/100 | TrLoss:0.0420 OA:0.9798 mIoU:0.8978 | VaLoss:0.0391 OA:0.9799 mIoU:0.8951 | 1.5s
+  Ep  18/100 | TrLoss:0.0449 OA:0.9779 mIoU:0.8896 | VaLoss:0.0407 OA:0.9801 mIoU:0.8890 | 1.5s
+  Ep  19/100 | TrLoss:0.0403 OA:0.9804 mIoU:0.9009 | VaLoss:0.0375 OA:0.9814 mIoU:0.8982 | 1.6s
+  Ep  20/100 | TrLoss:0.0390 OA:0.9798 mIoU:0.9027 | VaLoss:0.0380 OA:0.9821 mIoU:0.9115 | 1.5s
+  Ep  21/100 | TrLoss:0.0401 OA:0.9794 mIoU:0.9034 | VaLoss:0.0355 OA:0.9829 mIoU:0.9158 | 1.5s
+  Ep  22/100 | TrLoss:0.0340 OA:0.9835 mIoU:0.9139 | VaLoss:0.0335 OA:0.9826 mIoU:0.8988 | 1.5s
+  Ep  23/100 | TrLoss:0.0357 OA:0.9814 mIoU:0.9065 | VaLoss:0.0340 OA:0.9857 mIoU:0.9311 | 1.5s
+  Ep  24/100 | TrLoss:0.0324 OA:0.9833 mIoU:0.9180 | VaLoss:0.0313 OA:0.9857 mIoU:0.9293 | 1.5s
+  Ep  25/100 | TrLoss:0.0308 OA:0.9844 mIoU:0.9244 | VaLoss:0.0302 OA:0.9848 mIoU:0.9174 | 1.5s
+  Ep  26/100 | TrLoss:0.0283 OA:0.9856 mIoU:0.9248 | VaLoss:0.0292 OA:0.9866 mIoU:0.9270 | 1.8s
+  Ep  27/100 | TrLoss:0.0278 OA:0.9861 mIoU:0.9242 | VaLoss:0.0316 OA:0.9867 mIoU:0.9272 | 1.6s
+  Ep  28/100 | TrLoss:0.0267 OA:0.9868 mIoU:0.9312 | VaLoss:0.0278 OA:0.9872 mIoU:0.9325 | 1.5s
+  Ep  29/100 | TrLoss:0.0265 OA:0.9856 mIoU:0.9313 | VaLoss:0.0266 OA:0.9876 mIoU:0.9376 | 1.5s
+  Ep  30/100 | TrLoss:0.0247 OA:0.9876 mIoU:0.9363 | VaLoss:0.0259 OA:0.9883 mIoU:0.9428 | 1.5s
+  Ep  31/100 | TrLoss:0.0233 OA:0.9879 mIoU:0.9397 | VaLoss:0.0254 OA:0.9890 mIoU:0.9449 | 1.5s
+  Ep  32/100 | TrLoss:0.0227 OA:0.9889 mIoU:0.9433 | VaLoss:0.0242 OA:0.9882 mIoU:0.9363 | 1.5s
+  Ep  33/100 | TrLoss:0.0218 OA:0.9891 mIoU:0.9403 | VaLoss:0.0245 OA:0.9890 mIoU:0.9479 | 1.5s
+  Ep  34/100 | TrLoss:0.0204 OA:0.9896 mIoU:0.9461 | VaLoss:0.0233 OA:0.9896 mIoU:0.9468 | 1.5s
+  Ep  35/100 | TrLoss:0.0204 OA:0.9894 mIoU:0.9467 | VaLoss:0.0227 OA:0.9899 mIoU:0.9480 | 1.5s
+  Ep  36/100 | TrLoss:0.0225 OA:0.9886 mIoU:0.9409 | VaLoss:0.0235 OA:0.9902 mIoU:0.9514 | 1.5s
+  Ep  37/100 | TrLoss:0.0195 OA:0.9902 mIoU:0.9502 | VaLoss:0.0225 OA:0.9903 mIoU:0.9539 | 1.5s
+  Ep  38/100 | TrLoss:0.0188 OA:0.9903 mIoU:0.9514 | VaLoss:0.0220 OA:0.9906 mIoU:0.9542 | 1.5s
+  Ep  39/100 | TrLoss:0.0182 OA:0.9909 mIoU:0.9547 | VaLoss:0.0211 OA:0.9904 mIoU:0.9509 | 1.5s
+  Ep  40/100 | TrLoss:0.0182 OA:0.9904 mIoU:0.9505 | VaLoss:0.0219 OA:0.9907 mIoU:0.9563 | 1.5s
+  Ep  41/100 | TrLoss:0.0180 OA:0.9907 mIoU:0.9545 | VaLoss:0.0209 OA:0.9909 mIoU:0.9533 | 1.5s
+  Ep  42/100 | TrLoss:0.0184 OA:0.9906 mIoU:0.9553 | VaLoss:0.0202 OA:0.9900 mIoU:0.9407 | 1.5s
+  Ep  43/100 | TrLoss:0.0173 OA:0.9916 mIoU:0.9554 | VaLoss:0.0211 OA:0.9908 mIoU:0.9465 | 1.8s
+  Ep  44/100 | TrLoss:0.0167 OA:0.9918 mIoU:0.9601 | VaLoss:0.0193 OA:0.9913 mIoU:0.9541 | 1.5s
+  Ep  45/100 | TrLoss:0.0157 OA:0.9920 mIoU:0.9577 | VaLoss:0.0201 OA:0.9917 mIoU:0.9619 | 1.5s
+  Ep  46/100 | TrLoss:0.0173 OA:0.9911 mIoU:0.9582 | VaLoss:0.0205 OA:0.9910 mIoU:0.9501 | 1.5s
+  Ep  47/100 | TrLoss:0.0164 OA:0.9920 mIoU:0.9561 | VaLoss:0.0201 OA:0.9919 mIoU:0.9596 | 1.5s
+  Ep  48/100 | TrLoss:0.0164 OA:0.9918 mIoU:0.9614 | VaLoss:0.0192 OA:0.9915 mIoU:0.9539 | 1.5s
+  Ep  49/100 | TrLoss:0.0176 OA:0.9909 mIoU:0.9579 | VaLoss:0.0185 OA:0.9914 mIoU:0.9542 | 1.5s
+  Ep  50/100 | TrLoss:0.0156 OA:0.9919 mIoU:0.9589 | VaLoss:0.0188 OA:0.9917 mIoU:0.9596 | 1.5s
+  Ep  51/100 | TrLoss:0.0148 OA:0.9924 mIoU:0.9647 | VaLoss:0.0175 OA:0.9919 mIoU:0.9561 | 1.5s
+  Ep  52/100 | TrLoss:0.0136 OA:0.9935 mIoU:0.9661 | VaLoss:0.0174 OA:0.9922 mIoU:0.9619 | 1.5s
+  Ep  53/100 | TrLoss:0.0128 OA:0.9937 mIoU:0.9690 | VaLoss:0.0178 OA:0.9932 mIoU:0.9682 | 1.5s
+  Ep  54/100 | TrLoss:0.0130 OA:0.9934 mIoU:0.9713 | VaLoss:0.0173 OA:0.9929 mIoU:0.9654 | 1.8s
+  Ep  55/100 | TrLoss:0.0124 OA:0.9939 mIoU:0.9694 | VaLoss:0.0178 OA:0.9934 mIoU:0.9709 | 1.5s
+  Ep  56/100 | TrLoss:0.0118 OA:0.9944 mIoU:0.9738 | VaLoss:0.0165 OA:0.9932 mIoU:0.9663 | 1.5s
+  Ep  57/100 | TrLoss:0.0120 OA:0.9941 mIoU:0.9724 | VaLoss:0.0174 OA:0.9936 mIoU:0.9717 | 1.6s
+  Ep  58/100 | TrLoss:0.0113 OA:0.9947 mIoU:0.9731 | VaLoss:0.0174 OA:0.9936 mIoU:0.9708 | 1.5s
+  Ep  59/100 | TrLoss:0.0121 OA:0.9942 mIoU:0.9740 | VaLoss:0.0164 OA:0.9932 mIoU:0.9642 | 1.8s
+  Ep  60/100 | TrLoss:0.0117 OA:0.9944 mIoU:0.9725 | VaLoss:0.0162 OA:0.9934 mIoU:0.9678 | 1.5s
+  Ep  61/100 | TrLoss:0.0126 OA:0.9937 mIoU:0.9673 | VaLoss:0.0172 OA:0.9929 mIoU:0.9683 | 1.5s
+  Ep  62/100 | TrLoss:0.0121 OA:0.9942 mIoU:0.9720 | VaLoss:0.0161 OA:0.9929 mIoU:0.9625 | 1.5s
+  Ep  63/100 | TrLoss:0.0108 OA:0.9950 mIoU:0.9757 | VaLoss:0.0160 OA:0.9938 mIoU:0.9715 | 1.5s
+  Ep  64/100 | TrLoss:0.0116 OA:0.9942 mIoU:0.9726 | VaLoss:0.0160 OA:0.9938 mIoU:0.9722 | 1.8s
+  Ep  65/100 | TrLoss:0.0107 OA:0.9949 mIoU:0.9759 | VaLoss:0.0160 OA:0.9938 mIoU:0.9704 | 1.5s
+  Ep  66/100 | TrLoss:0.0100 OA:0.9954 mIoU:0.9776 | VaLoss:0.0153 OA:0.9939 mIoU:0.9723 | 1.5s
+  Ep  67/100 | TrLoss:0.0095 OA:0.9959 mIoU:0.9791 | VaLoss:0.0161 OA:0.9941 mIoU:0.9744 | 1.5s
+  Ep  68/100 | TrLoss:0.0099 OA:0.9952 mIoU:0.9764 | VaLoss:0.0164 OA:0.9941 mIoU:0.9741 | 1.5s
+  Ep  69/100 | TrLoss:0.0101 OA:0.9952 mIoU:0.9790 | VaLoss:0.0152 OA:0.9941 mIoU:0.9726 | 1.5s
+  Ep  70/100 | TrLoss:0.0098 OA:0.9955 mIoU:0.9772 | VaLoss:0.0156 OA:0.9942 mIoU:0.9751 | 1.8s
+  Ep  71/100 | TrLoss:0.0096 OA:0.9955 mIoU:0.9794 | VaLoss:0.0154 OA:0.9943 mIoU:0.9742 | 1.5s
+  Ep  72/100 | TrLoss:0.0091 OA:0.9960 mIoU:0.9802 | VaLoss:0.0158 OA:0.9944 mIoU:0.9762 | 1.5s
+  Ep  73/100 | TrLoss:0.0089 OA:0.9962 mIoU:0.9808 | VaLoss:0.0147 OA:0.9942 mIoU:0.9727 | 1.5s
+  Ep  74/100 | TrLoss:0.0093 OA:0.9959 mIoU:0.9793 | VaLoss:0.0156 OA:0.9944 mIoU:0.9756 | 1.6s
+  Ep  75/100 | TrLoss:0.0090 OA:0.9960 mIoU:0.9799 | VaLoss:0.0154 OA:0.9945 mIoU:0.9760 | 1.9s
+  Ep  76/100 | TrLoss:0.0095 OA:0.9956 mIoU:0.9801 | VaLoss:0.0147 OA:0.9943 mIoU:0.9747 | 1.6s
+  Ep  77/100 | TrLoss:0.0085 OA:0.9964 mIoU:0.9813 | VaLoss:0.0154 OA:0.9945 mIoU:0.9753 | 1.6s
+  Ep  78/100 | TrLoss:0.0088 OA:0.9961 mIoU:0.9805 | VaLoss:0.0149 OA:0.9945 mIoU:0.9755 | 1.6s
+  Ep  79/100 | TrLoss:0.0090 OA:0.9963 mIoU:0.9809 | VaLoss:0.0152 OA:0.9944 mIoU:0.9741 | 1.6s
+  Ep  80/100 | TrLoss:0.0089 OA:0.9959 mIoU:0.9794 | VaLoss:0.0149 OA:0.9945 mIoU:0.9759 | 1.8s
+  Ep  81/100 | TrLoss:0.0083 OA:0.9966 mIoU:0.9830 | VaLoss:0.0151 OA:0.9946 mIoU:0.9759 | 1.6s
+  Ep  82/100 | TrLoss:0.0087 OA:0.9961 mIoU:0.9815 | VaLoss:0.0146 OA:0.9945 mIoU:0.9750 | 1.6s
+  Ep  83/100 | TrLoss:0.0084 OA:0.9964 mIoU:0.9813 | VaLoss:0.0147 OA:0.9946 mIoU:0.9762 | 1.6s
+  Ep  84/100 | TrLoss:0.0087 OA:0.9964 mIoU:0.9820 | VaLoss:0.0150 OA:0.9946 mIoU:0.9766 | 1.5s
+  Ep  85/100 | TrLoss:0.0083 OA:0.9965 mIoU:0.9822 | VaLoss:0.0147 OA:0.9946 mIoU:0.9765 | 1.5s
+  Ep  86/100 | TrLoss:0.0088 OA:0.9961 mIoU:0.9810 | VaLoss:0.0146 OA:0.9946 mIoU:0.9755 | 1.5s
+  Ep  87/100 | TrLoss:0.0082 OA:0.9965 mIoU:0.9820 | VaLoss:0.0148 OA:0.9947 mIoU:0.9769 | 1.5s
+  Ep  88/100 | TrLoss:0.0081 OA:0.9966 mIoU:0.9836 | VaLoss:0.0148 OA:0.9946 mIoU:0.9769 | 1.5s
+  Ep  89/100 | TrLoss:0.0079 OA:0.9967 mIoU:0.9831 | VaLoss:0.0146 OA:0.9946 mIoU:0.9764 | 1.7s
+  Ep  90/100 | TrLoss:0.0079 OA:0.9968 mIoU:0.9834 | VaLoss:0.0149 OA:0.9947 mIoU:0.9766 | 1.5s
+  Ep  91/100 | TrLoss:0.0082 OA:0.9964 mIoU:0.9829 | VaLoss:0.0150 OA:0.9947 mIoU:0.9773 | 1.5s
+  Ep  92/100 | TrLoss:0.0083 OA:0.9964 mIoU:0.9824 | VaLoss:0.0148 OA:0.9946 mIoU:0.9762 | 1.5s
+  Ep  93/100 | TrLoss:0.0082 OA:0.9965 mIoU:0.9830 | VaLoss:0.0148 OA:0.9946 mIoU:0.9769 | 1.5s
+  Ep  94/100 | TrLoss:0.0079 OA:0.9967 mIoU:0.9833 | VaLoss:0.0146 OA:0.9946 mIoU:0.9763 | 1.6s
+  Ep  95/100 | TrLoss:0.0086 OA:0.9964 mIoU:0.9822 | VaLoss:0.0147 OA:0.9946 mIoU:0.9763 | 1.6s
+  Ep  96/100 | TrLoss:0.0084 OA:0.9965 mIoU:0.9821 | VaLoss:0.0146 OA:0.9946 mIoU:0.9755 | 1.5s
+  Ep  97/100 | TrLoss:0.0085 OA:0.9964 mIoU:0.9822 | VaLoss:0.0147 OA:0.9946 mIoU:0.9758 | 1.5s
+  Ep  98/100 | TrLoss:0.0080 OA:0.9967 mIoU:0.9828 | VaLoss:0.0147 OA:0.9946 mIoU:0.9761 | 1.5s
+  Ep  99/100 | TrLoss:0.0078 OA:0.9969 mIoU:0.9832 | VaLoss:0.0148 OA:0.9947 mIoU:0.9764 | 1.5s
+  Ep 100/100 | TrLoss:0.0080 OA:0.9966 mIoU:0.9828 | VaLoss:0.0147 OA:0.9947 mIoU:0.9763 | 1.7s
+
+  ✓ Finished mobilenet_v2. Best mIoU: 0.9773
+  Logs saved to: /opt/watchdog/users/cerussite/alok/work/modelss/ablations/logs/mobilenet_v2_history.json
