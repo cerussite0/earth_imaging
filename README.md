@@ -1,4 +1,4 @@
-# 🌍 LULC Segmentation — Landsat 8 Deep Learning Pipeline
+# 🌍 LULC Segmentation: Landsat 8 Deep Learning Pipeline
 
 Semantic segmentation of **Land Use / Land Cover (LULC)** from multispectral Landsat 8 imagery using encoder-decoder CNNs (ResNet-18, EfficientNet-B0, MobileNetV2). The pipeline covers the full lifecycle: satellite data acquisition → spatial harmonization → patch generation → model training → hyperparameter optimization → evaluation & visualization.
 
